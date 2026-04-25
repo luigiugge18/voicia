@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voicia Vet — La centralinista che non dorme mai</title>
+<meta name="description" content="AI receptionist 24/7 in italiano per cliniche veterinarie. Risponde, prende appuntamenti, distingue le urgenze.">
+<meta property="og:title" content="Voicia Vet — La centralinista che non dorme mai">
+<meta property="og:description" content="AI receptionist 24/7 per cliniche veterinarie italiane.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://voicia.fegima.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1A1A1A;--coral:#FF6B5B;--coral-dark:#E5564A;--bg:#FAFAF7;--card:#FFFFFF;--muted:#6B6B6B;--line:#EBEAE5;--ok:#0F8F5E;--shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.04);--radius:14px}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:"Inter",-apple-system,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}img,svg{max-width:100%;display:block}.container{max-width:1140px;margin:0 auto;padding:0 28px}
+nav.top{position:sticky;top:0;z-index:50;background:rgba(250,250,247,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav.top .row{display:flex;align-items:center;justify-content:space-between;height:68px}
+nav.top a.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+nav.top .links{display:flex;gap:28px;align-items:center}
+nav.top .links a{text-decoration:none;font-weight:500;font-size:15px;color:var(--ink)}
+nav.top .links a:hover{color:var(--coral)}
+nav.top .cta{background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-weight:600;font-size:14px;text-decoration:none}
+nav.top .cta:hover{background:var(--coral);color:var(--ink)}
+@media (max-width:720px){nav.top .links a:not(.cta){display:none}}
+.hero{padding:96px 0 80px}
+.hero .eyebrow{display:inline-block;padding:6px 12px;background:rgba(255,107,91,.12);color:var(--coral-dark);border-radius:999px;font-size:13px;font-weight:600;margin-bottom:20px}
+.hero h1{font-size:clamp(38px,6vw,72px);font-weight:800;letter-spacing:-2.5px;line-height:1.05;margin:0 0 22px}
+.hero h1 span.coral{color:var(--coral)}
+.hero p.lede{font-size:20px;color:var(--muted);max-width:640px;margin:0 0 32px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary,.btn-secondary{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:transform .12s ease;border:none;cursor:pointer}
+.btn-primary{background:var(--coral);color:var(--ink)}
+.btn-primary:hover{background:var(--coral-dark);transform:translateY(-1px)}
+.btn-secondary{background:var(--ink);color:#fff}
+.btn-secondary:hover{background:#2c2c2c;transform:translateY(-1px)}
+.hero .trust{margin-top:28px;color:var(--muted);font-size:14px}
+.hero .trust b{color:var(--ink)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+@media (max-width:960px){.hero-grid{grid-template-columns:1fr}.phone-card{margin-top:24px}}
+.phone-card{background:var(--ink);border-radius:28px;padding:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.phone-card::after{content:"";position:absolute;right:-30px;bottom:-30px;width:200px;height:200px;background:radial-gradient(closest-side,rgba(255,107,91,.35),transparent 70%)}
+.phone-card .head{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.phone-card .dot{width:10px;height:10px;background:var(--coral);border-radius:50%;box-shadow:0 0 0 4px rgba(255,107,91,.2);animation:pulse 1.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,107,91,.4)}70%{box-shadow:0 0 0 12px rgba(255,107,91,0)}100%{box-shadow:0 0 0 0 rgba(255,107,91,0)}}
+.phone-card .label{font-size:13px;color:#C8C7C2}
+.phone-card .num{font-weight:700;font-size:17px}
+.bubble{padding:12px 16px;border-radius:16px;max-width:88%;margin-bottom:10px;line-height:1.45;font-size:15px}
+.bubble.them{background:#2C2C2C;color:#fff;border-bottom-left-radius:4px}
+.bubble.us{background:var(--coral);color:var(--ink);margin-left:auto;border-bottom-right-radius:4px}
+.meta-row{display:flex;gap:16px;margin-top:18px;padding-top:18px;border-top:1px solid #2C2C2C;font-size:13px;color:#C8C7C2}
+.meta-row b{color:#fff;display:block;font-size:16px}
+.stats{background:var(--ink);color:#fff;padding:36px 0}
+.stats .row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media (max-width:720px){.stats .row{grid-template-columns:repeat(2,1fr)}}
+.stat{text-align:center}
+.stat b{display:block;font-size:36px;font-weight:800;letter-spacing:-1px;color:var(--coral)}
+.stat span{color:#C8C7C2;font-size:14px}
+section.block{padding:96px 0}
+section.block.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.h-eyebrow{color:var(--coral-dark);font-weight:600;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 12px}
+h2.section-title{font-size:clamp(30px,4vw,46px);font-weight:800;letter-spacing:-1.2px;margin:0 0 16px}
+p.section-lede{color:var(--muted);font-size:18px;max-width:720px;margin:0 0 56px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media (max-width:880px){.steps{grid-template-columns:repeat(2,1fr)}}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.step .num{width:36px;height:36px;border-radius:10px;background:var(--ink);color:var(--coral);display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:16px}
+.step h3{margin:0 0 8px;font-size:17px}
+.step p{margin:0;color:var(--muted);font-size:14.5px}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+@media (max-width:920px){.tiers{grid-template-columns:1fr}}
+.tier{background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px 26px;display:flex;flex-direction:column}
+.tier.featured{background:var(--ink);color:#fff;border-color:var(--ink);transform:translateY(-6px)}
+.tier .badge{display:inline-block;background:var(--coral);color:var(--ink);padding:4px 10px;border-radius:999px;font-weight:700;font-size:12px;margin-bottom:12px}
+.tier h3{margin:0 0 6px;font-size:22px;font-weight:700}
+.tier .desc{color:var(--muted);font-size:14px;margin:0 0 18px}
+.tier.featured .desc{color:#C8C7C2}
+.tier .price{font-size:44px;font-weight:800;letter-spacing:-1.5px}
+.tier .price small{font-size:16px;font-weight:500;color:var(--muted)}
+.tier.featured .price small{color:#C8C7C2}
+.tier .setup{font-size:13.5px;color:var(--muted);margin-bottom:22px}
+.tier.featured .setup{color:#C8C7C2}
+.tier ul{list-style:none;padding:0;margin:0 0 26px}
+.tier ul li{padding:7px 0;font-size:14.5px;display:flex;gap:8px}
+.tier ul li::before{content:"✓";color:var(--coral);font-weight:700}
+.tier .btn-primary,.tier .btn-secondary{width:100%;justify-content:center;margin-top:auto}
+.tier.featured .btn-primary{background:var(--coral);color:var(--ink)}
+.guarantee{margin-top:36px;padding:24px;border-radius:var(--radius);border:1px dashed var(--coral);background:rgba(255,107,91,.06);display:flex;gap:16px;align-items:flex-start}
+.guarantee .ic{width:38px;height:38px;border-radius:10px;background:var(--coral);color:var(--ink);display:flex;align-items:center;justify-content:center;font-weight:800}
+.guarantee b{display:block;margin-bottom:4px}
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media (max-width:920px){.cases{grid-template-columns:1fr}}
+.case{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.case h4{margin:0 0 6px;font-size:16px}
+.case .when{font-size:13px;color:var(--coral-dark);font-weight:600;margin-bottom:12px}
+.case .quote{font-size:14.5px;color:var(--muted);border-left:2px solid var(--coral);padding-left:14px}
+.faq{max-width:820px;margin:0 auto}
+.faq details{border-bottom:1px solid var(--line);padding:22px 0}
+.faq summary{font-weight:600;font-size:17px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--coral);font-size:28px;font-weight:300;transition:transform .2s}
+.faq details[open] summary::after{content:"−"}
+.faq p{color:var(--muted);margin:12px 0 0;font-size:15px;line-height:1.65}
+.cta-banner{background:var(--ink);color:#fff;border-radius:22px;padding:48px;text-align:center}
+.cta-banner h2{font-size:36px;font-weight:800;letter-spacing:-1px;margin:0 0 12px}
+.cta-banner p{color:#C8C7C2;max-width:540px;margin:0 auto 28px}
+.cta-banner .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+footer.site{padding:56px 0 40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);background:var(--bg)}
+footer.site .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<nav class="top"><div class="container row">
+<a class="logo" href="/"><svg viewBox="0 0 160 50" width="120" height="36" xmlns="http://www.w3.org/2000/svg"><g transform="translate(2,8)"><path d="M 0 18 Q 6 0, 12 18 T 24 18" fill="none" stroke="#1A1A1A" stroke-width="3.2" stroke-linecap="round"/><path d="M 30 18 Q 36 -6, 42 18 T 54 18" fill="none" stroke="#1A1A1A" stroke-width="3.2" stroke-linecap="round"/><circle cx="62" cy="18" r="5" fill="#FF6B5B"/></g><text x="78" y="35" font-family="Inter, Arial" font-size="28" font-weight="800" fill="#1A1A1A" letter-spacing="-1.2">voicia</text></svg></a>
+<div class="links"><a href="#how">Come funziona</a><a href="#pricing">Prezzi</a><a href="#faq">FAQ</a><a class="cta" href="#contact">Prenota demo</a></div>
+</div></nav>
+<header class="hero"><div class="container hero-grid">
+<div>
+<span class="eyebrow">Per cliniche veterinarie italiane · v1.0</span>
+<h1>La <span class="coral">centralinista</span> che non dorme mai.</h1>
+<p class="lede">Voicia Vet risponde alle telefonate della tua clinica 24 ore su 24, in italiano. Distingue le urgenze, prende appuntamenti sul tuo calendario, gestisce le FAQ. Tu ti occupi degli animali.</p>
+<div class="ctas"><a class="btn-primary" href="#contact">Prenota una demo da 20 min →</a><a class="btn-secondary" href="tel:+390000000000">📞 Chiama il demo: 02 0000 0000</a></div>
+<p class="trust">⭐⭐⭐⭐⭐ <b>"Ho recuperato 3 visite la prima settimana."</b> — Dr. Marco R., clinica San Francesco, Milano</p>
+</div>
+<aside class="phone-card"><div class="head"><div class="dot"></div><div><div class="label">In linea con Voicia · 21:47</div><div class="num">Clinica Veterinaria San Francesco</div></div></div>
+<div class="bubble them">"Buonasera, il mio cane Argo ha vomitato sangue, non sta bene per niente."</div>
+<div class="bubble us">"Capisco. Quello che mi descrive è urgente. Le passo subito il dottore di guardia. Mentre aspetta — Argo di che razza è e che peso, circa?"</div>
+<div class="bubble them">"È un labrador di 28 kg."</div>
+<div class="bubble us">"Perfetto. Resti in linea, le passo il dottor Bianchi adesso."</div>
+<div class="meta-row"><div><b>0:42</b><span>durata</span></div><div><b>Urgenza A</b><span>classificata</span></div><div><b>Escalation</b><span>al medico di guardia</span></div></div>
+</aside>
+</div></header>
+<section class="stats"><div class="container row">
+<div class="stat"><b>24/7</b><span>operativo, anche notti e weekend</span></div>
+<div class="stat"><b>&lt;800ms</b><span>tempo di risposta in conversazione</span></div>
+<div class="stat"><b>78%</b><span>chiamate gestite senza umani</span></div>
+<div class="stat"><b>5 giorni</b><span>dall'attivazione al go-live</span></div>
+</div></section>
+<section class="block" id="how"><div class="container">
+<p class="h-eyebrow">Come funziona</p>
+<h2 class="section-title">Da 0 a operativo in 5 giorni.</h2>
+<p class="section-lede">Configuriamo l'agente vocale sui flussi reali della tua clinica. Tu ci dedichi 60 minuti la prima volta, poi la review è di 15 minuti la settimana.</p>
+<div class="steps">
+<div class="step"><div class="num">1</div><h3>Discovery</h3><p>60 min per mappare orari, FAQ, urgenze, integrazione calendario.</p></div>
+<div class="step"><div class="num">2</div><h3>Configurazione</h3><p>Costruiamo il system prompt, scegliamo voce italiana, attiviamo Google Calendar.</p></div>
+<div class="step"><div class="num">3</div><h3>UAT &amp; refining</h3><p>Provi 5-10 chiamate test, ci dici cosa correggere. Iteriamo.</p></div>
+<div class="step"><div class="num">4</div><h3>Go-live</h3><p>Numero attivo. Monitoraggio intensivo prime 24h, riepilogo giornaliero.</p></div>
+</div>
+</div></section>
+<section class="block alt" id="cases"><div class="container">
+<p class="h-eyebrow">Cosa fa davvero</p>
+<h2 class="section-title">Tre scenari ricorrenti.</h2>
+<div class="cases">
+<div class="case"><h4>Urgenza fuori orario</h4><div class="when">Sabato sera, 22:30</div><div class="quote">"Il mio gatto non riesce a urinare." → Voicia riconosce l'urgenza assoluta, passa al medico di guardia in 15 secondi.</div></div>
+<div class="case"><h4>Appuntamento di routine</h4><div class="when">Mercoledì pomeriggio</div><div class="quote">"Vorrei vaccinare il mio cucciolo." → Voicia raccoglie razza, anagrafica, propone 2 slot, conferma via SMS.</div></div>
+<div class="case"><h4>Domanda di prezzo</h4><div class="when">Domenica mattina</div><div class="quote">"Quanto costa una sterilizzazione?" → Voicia risponde dal listino, ricorda che il dottore farà preventivo per il caso specifico.</div></div>
+</div>
+</div></section>
+<section class="block" id="pricing"><div class="container">
+<p class="h-eyebrow">Prezzi</p>
+<h2 class="section-title">Tre piani. Nessun vincolo annuale.</h2>
+<p class="section-lede">Setup una tantum, poi mensile. Disdicibile con 30 giorni di preavviso. Prezzi al netto di IVA.</p>
+<div class="tiers">
+<div class="tier"><h3>Vet Start</h3><p class="desc">Cliniche fino a 500 chiamate/mese.</p><div class="price">390€<small>/mese</small></div><div class="setup">+ setup 1.900€</div>
+<ul><li>1 numero dedicato (Twilio IT)</li><li>Fino a 500 chiamate/mese</li><li>1 calendario integrato</li><li>5 FAQ personalizzate</li><li>Riepilogo giornaliero</li><li>Supporto entro 4h</li></ul>
+<a class="btn-secondary" href="#contact">Inizia da Start</a></div>
+<div class="tier featured"><span class="badge">Più scelto</span><h3>Vet Pro</h3><p class="desc">Multi-veterinario, integrazione gestionale.</p><div class="price">590€<small>/mese</small></div><div class="setup">+ setup 2.500€</div>
+<ul><li>Tutto Start, più:</li><li>Fino a 1.500 chiamate/mese</li><li>Integrazione gestionali (eVet, Vetalia, Easyvet)</li><li>Gestione urgenze custom multi-vet</li><li>Dashboard live</li><li>Modifiche prompt illimitate</li><li>Supporto entro 1h</li></ul>
+<a class="btn-primary" href="#contact">Scegli Pro</a></div>
+<div class="tier"><h3>Vet Multi</h3><p class="desc">Gruppi multi-sede, multi-lingua.</p><div class="price">990€<small>/mese</small></div><div class="setup">+ setup 3.900€</div>
+<ul><li>Tutto Pro, più:</li><li>Fino a 3 sedi</li><li>Multi-lingua IT/EN</li><li>Escalation custom per sede</li><li>Account manager dedicato</li><li>Supporto entro 30 min</li></ul>
+<a class="btn-secondary" href="#contact">Parla con noi</a></div>
+</div>
+<div class="guarantee"><div class="ic">€</div><div><b>Garanzia 30 giorni.</b> Se nel primo mese Voicia non gestisce 100 chiamate o non prenota 20 visite, ti rimborsiamo il setup. Senza domande.</div></div>
+</div></section>
+<section class="block alt" id="faq"><div class="container">
+<p class="h-eyebrow">Domande frequenti</p>
+<h2 class="section-title">Quello che ci chiedono prima di iniziare.</h2>
+<div class="faq">
+<details><summary>I miei clienti capiranno che è un'AI?</summary><p>Voicia non finge di essere umana, ma usa una voce italiana naturale. Se chiedono esplicitamente, rispondiamo con la verità. In test cieco oltre il 70% non si è accorto.</p></details>
+<details><summary>Cosa succede se sbaglia su un'urgenza?</summary><p>Sistema conservativo: in dubbio, escalation immediata. Le keyword sensibili (sangue, non respira, convulsioni) attivano sempre il passaggio umano.</p></details>
+<details><summary>Si integra con il mio gestionale?</summary><p>Pro: integrazione nativa eVet, Vetalia, Vetbalance, Easyvet. Per altri: integrazione custom inclusa. Start: Google Calendar / Cal.com.</p></details>
+<details><summary>Quanto dura il contratto? Posso disdire?</summary><p>Mensile, disdicibile con 30 giorni di preavviso. Nessun vincolo annuale.</p></details>
+<details><summary>Cosa fate per il GDPR?</summary><p>Server EU, registrazioni cifrate, retention 30 giorni. Ti forniamo informativa GDPR-conforme + DPA prima di partire.</p></details>
+<details><summary>Quanto tempo per configurarlo?</summary><p>Configuriamo noi. Tu dedichi 60 min di intervista una volta + 30 min di UAT. Vai in produzione in 5 giorni.</p></details>
+<details><summary>Posso usare il numero che ho già?</summary><p>Sì, supportiamo porting o inoltro condizionale. In alternativa: numero Twilio italiano dedicato.</p></details>
+</div>
+</div></section>
+<section class="block" id="contact"><div class="container">
+<div class="cta-banner">
+<h2>Vuoi sentire come risponderebbe alla tua clinica?</h2>
+<p>Costruiamo un demo specifico con il nome della tua clinica e gli orari reali. Ci vogliono 15 minuti.</p>
+<div class="ctas"><a class="btn-primary" href="mailto:ciao@voicia.fegima.com">Prenota la demo →</a><a class="btn-secondary" href="tel:+390000000000">📞 Chiama il demo</a></div>
+</div>
+</div></section>
+<footer class="site"><div class="container row">
+<div>© 2026 Voicia · La centralinista che non dorme mai.</div>
+<div><a href="#">Privacy</a> · <a href="#">Termini</a> · <a href="#">DPA</a></div>
+</div></footer>
+</body>
+                           </html>
