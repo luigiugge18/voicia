@@ -22,12 +22,13 @@ a{color:inherit}img,svg{max-width:100%;display:block}.container{max-width:1140px
 nav.top{position:sticky;top:0;z-index:50;background:rgba(250,250,247,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 nav.top .row{display:flex;align-items:center;justify-content:space-between;height:68px}
 nav.top a.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+nav.top .brand-by{font-size:11px;color:var(--muted);font-weight:500;margin-left:8px;letter-spacing:.3px}
 nav.top .links{display:flex;gap:28px;align-items:center}
 nav.top .links a{text-decoration:none;font-weight:500;font-size:15px;color:var(--ink)}
 nav.top .links a:hover{color:var(--coral)}
 nav.top .cta{background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-weight:600;font-size:14px;text-decoration:none}
 nav.top .cta:hover{background:var(--coral);color:var(--ink)}
-@media (max-width:720px){nav.top .links a:not(.cta){display:none}}
+@media (max-width:720px){nav.top .links a:not(.cta){display:none}.brand-by{display:none}}
 .hero{padding:96px 0 80px}
 .hero .eyebrow{display:inline-block;padding:6px 12px;background:rgba(255,107,91,.12);color:var(--coral-dark);border-radius:999px;font-size:13px;font-weight:600;margin-bottom:20px}
 .hero h1{font-size:clamp(38px,6vw,72px);font-weight:800;letter-spacing:-2.5px;line-height:1.05;margin:0 0 22px}
@@ -41,6 +42,8 @@ nav.top .cta:hover{background:var(--coral);color:var(--ink)}
 .btn-secondary:hover{background:#2c2c2c;transform:translateY(-1px)}
 .hero .trust{margin-top:28px;color:var(--muted);font-size:14px}
 .hero .trust b{color:var(--ink)}
+.hero .by-line{margin-top:14px;color:var(--muted);font-size:13px}
+.hero .by-line b{color:var(--ink);font-weight:600}
 .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
 @media (max-width:960px){.hero-grid{grid-template-columns:1fr}.phone-card{margin-top:24px}}
 .phone-card{background:var(--ink);border-radius:28px;padding:28px;color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}
@@ -112,11 +115,12 @@ p.section-lede{color:var(--muted);font-size:18px;max-width:720px;margin:0 0 56px
 .cta-banner .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 footer.site{padding:56px 0 40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);background:var(--bg)}
 footer.site .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer.site .by b{color:var(--ink);font-weight:600}
 </style>
 </head>
 <body>
 <nav class="top"><div class="container row">
-<a class="logo" href="/"><svg viewBox="0 0 160 50" width="120" height="36" xmlns="http://www.w3.org/2000/svg"><g transform="translate(2,8)"><path d="M 0 18 Q 6 0, 12 18 T 24 18" fill="none" stroke="#1A1A1A" stroke-width="3.2" stroke-linecap="round"/><path d="M 30 18 Q 36 -6, 42 18 T 54 18" fill="none" stroke="#1A1A1A" stroke-width="3.2" stroke-linecap="round"/><circle cx="62" cy="18" r="5" fill="#FF6B5B"/></g><text x="78" y="35" font-family="Inter, Arial" font-size="28" font-weight="800" fill="#1A1A1A" letter-spacing="-1.2">voicia</text></svg></a>
+<a class="logo" href="/"><svg viewBox="0 0 160 50" width="120" height="36" xmlns="http://www.w3.org/2000/svg"><g transform="translate(2,8)"><path d="M 0 18 Q 6 0, 12 18 T 24 18" fill="none" stroke="#1A1A1A" stroke-width="3.2" stroke-linecap="round"/><path d="M 30 18 Q 36 -6, 42 18 T 54 18" fill="none" stroke="#1A1A1A" stroke-width="3.2" stroke-linecap="round"/><circle cx="62" cy="18" r="5" fill="#FF6B5B"/></g><text x="78" y="35" font-family="Inter, Arial" font-size="28" font-weight="800" fill="#1A1A1A" letter-spacing="-1.2">voicia</text></svg><span class="brand-by">by FeGi M&amp;A Services</span></a>
 <div class="links"><a href="#how">Come funziona</a><a href="#pricing">Prezzi</a><a href="#faq">FAQ</a><a class="cta" href="#contact">Prenota demo</a></div>
 </div></nav>
 <header class="hero"><div class="container hero-grid">
@@ -126,6 +130,7 @@ footer.site .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:w
 <p class="lede">Voicia Vet risponde alle telefonate della tua clinica 24 ore su 24, in italiano. Distingue le urgenze, prende appuntamenti sul tuo calendario, gestisce le FAQ. Tu ti occupi degli animali.</p>
 <div class="ctas"><a class="btn-primary" href="#contact">Prenota una demo da 20 min →</a><a class="btn-secondary" href="tel:+390000000000">📞 Chiama il demo: 02 0000 0000</a></div>
 <p class="trust">⭐⭐⭐⭐⭐ <b>"Ho recuperato 3 visite la prima settimana."</b> — Dr. Marco R., clinica San Francesco, Milano</p>
+<p class="by-line">Operato da <b>FeGi M&amp;A Services</b> · Milano</p>
 </div>
 <aside class="phone-card"><div class="head"><div class="dot"></div><div><div class="label">In linea con Voicia · 21:47</div><div class="num">Clinica Veterinaria San Francesco</div></div></div>
 <div class="bubble them">"Buonasera, il mio cane Argo ha vomitato sangue, non sta bene per niente."</div>
@@ -189,6 +194,7 @@ footer.site .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:w
 <details><summary>Cosa fate per il GDPR?</summary><p>Server EU, registrazioni cifrate, retention 30 giorni. Ti forniamo informativa GDPR-conforme + DPA prima di partire.</p></details>
 <details><summary>Quanto tempo per configurarlo?</summary><p>Configuriamo noi. Tu dedichi 60 min di intervista una volta + 30 min di UAT. Vai in produzione in 5 giorni.</p></details>
 <details><summary>Posso usare il numero che ho già?</summary><p>Sì, supportiamo porting o inoltro condizionale. In alternativa: numero Twilio italiano dedicato.</p></details>
+<details><summary>Chi c'è dietro Voicia?</summary><p>Voicia è un servizio di FeGi M&amp;A Services, Milano. Operiamo cliniche veterinarie italiane indipendenti dal 2026. Per parlare direttamente: ciao@voicia.fegima.com.</p></details>
 </div>
 </div></section>
 <section class="block" id="contact"><div class="container">
@@ -199,8 +205,8 @@ footer.site .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:w
 </div>
 </div></section>
 <footer class="site"><div class="container row">
-<div>© 2026 Voicia · La centralinista che non dorme mai.</div>
+<div class="by">© 2026 <b>Voicia</b>, un servizio di <b>FeGi M&amp;A Services</b> · Milano · La centralinista che non dorme mai.</div>
 <div><a href="#">Privacy</a> · <a href="#">Termini</a> · <a href="#">DPA</a></div>
 </div></footer>
 </body>
-                           </html>
+</html>
